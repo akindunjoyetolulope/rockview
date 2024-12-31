@@ -1,4 +1,3 @@
-import { Popcorn } from "lucide";
 import Header from "./Header";
 
 export default function Landing() {
