@@ -1,108 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
-/* base styles */
-* {
+body {
   margin: 0;
-  font-family: "Quicksand";
-  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.navbar {
-  padding: 20px;
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header {
   display: flex;
+  height: 56px;
+  font-size: 16px;
+  font-weight: 600;
+  background: #000;
+  color: white;
+  justify-content: start;
   align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
-}
-.navbar h1 {
-  color: #f1356d;
-}
-.navbar .links {
-  margin-left: auto;
-}
-.navbar a {
-  margin-left: 16px;
-  text-decoration: none;
-  padding: 6px;
-}
-.navbar a:hover {
-  color: #f1356d;
-}
-.content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+  padding-left: 20px;
 }
 
-/* blog previews / list */
-.blog-preview {
-  background-color: #f2f2f2;
-  padding: 10px 16px;
-  margin: 20px 0;
-  border-bottom: 1px solid #f1356d;
-  border-right:1px solid #f1356d ;
-}
-.blog-preview:hover {
-  box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.1);
-}
-
-.blog-preview h2 {
-  font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 8px;
-  
+.container {
+  display: flex;
+  min-height: calc(100vh - 56px);
+  max-width: 1440px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
 }
 
-.blog-preview a{
-  text-decoration: none;
+.background {
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  background-image: url("../src/assets/image/bg-img.jpg");
+  background-color: #cccccc;
 }
 
-/* blog details page */
-.blog-details h2 {
-  font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 10px;
-}
-.blog-details div {
-  margin: 20px 0;
-}
-.blog-details button {
-  background: #f1356d;
-  color: #fff;
-  border: 0;
-  padding: 8px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-/* create new blog form */
-.create {
-  max-width: 400px;
-  margin: 0 auto;
+.center-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   text-align: center;
 }
-.create label {
-  text-align: left;
-  display: block;
-}
-.create h2 {
-  font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 30px;
-}
-.create input, .create textarea, .create select {
-  width: 100%;
-  padding: 6px 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  box-sizing: border-box;
-  display: block;
-}
-.create button {
-  background: #f1356d;
+
+.gradient-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
   color: #fff;
-  border: 0;
-  padding: 8px;
-  border-radius: 8px;
+  background: linear-gradient(90deg, #4a90e2, #8e44ad);
+  border: none;
+  border-radius: 12px;
   cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gradient-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-button:active {
+  transform: scale(0.95);
+}
+
+.btn {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.btn svg {
+  width: 16px;
+  height: 16px;
 }
