@@ -26,7 +26,7 @@ code {
 
 .container {
   display: flex;
-  min-height: calc(100vh - 56px);
+  min-height: calc(100svh - 56px);
   max-width: 1440px;
   align-items: center;
   justify-content: center;
